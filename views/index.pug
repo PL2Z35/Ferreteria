@@ -1,0 +1,13 @@
+extends layout
+block content
+  div(class="container")
+    form(action="/logAdmin" method="post")
+        div(class="form-row")
+            div(class="form-group col-sm-2")
+                label(for="usuario") Usuario
+                input(class="form-control" type="text", id="usuario" name="usuario")
+            div(class="form-group col-sm-2")
+                label(for="pass") pass 
+                input(class="form-control" type="password" id="pass" name="pass")
+        div(class="form-row")
+            button(type="submit") Listo
