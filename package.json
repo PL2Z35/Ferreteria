@@ -1,0 +1,25 @@
+{
+  "name": "ferreteria",
+  "version": "1.0.0",
+  "description": "Taller nodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PL2Z35/Ferreteria.git"
+  },
+  "keywords": [
+    "nodeJs"
+  ],
+  "author": "Cristian plazas, Cristina Huerfano, Carlos Salamanca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PL2Z35/Ferreteria/issues"
+  },
+  "homepage": "https://github.com/PL2Z35/Ferreteria#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
