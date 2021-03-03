@@ -15,6 +15,7 @@ app.get('/', function(req,res){
     })
 });
 app.use('/administrador',AdminRouter);
+app.use('/administrador/AnadirHerramientas',AdminRouter);
 
 //Carpeta publica
 app.use(express.static(path.join(__dirname, 'public')));

@@ -4,24 +4,24 @@ html
         title=title
         link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous")
 
-    body(style="background-color:#657D88;")
+    body(style)
         nav(class="container")
-            nav(class="navbar navbar-expand-lg  " style="background-color:#02031E")
+            nav(class="navbar navbar-expand-lg navbar-dark  " style="background-color:#02031E")
                 div(class="container-fluid")
-                    a(class="navbar-brand" href="#") Menu Herramientas
+                    a(class="navbar-brand" href="../administrador") Menu Herramientas
                     button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation")
                         span(class="navbar-toggler-icon")
                     div(class="collapse navbar-collapse" id="navbarText")
                         ul(class="navbar-nav me-auto mb-2 mb-lg-0")
                             li(class="nav-item")
-                            a(class="nav-link active" aria-current="page" href="#") Añadir herramienta 
+                            a(class="nav-link active" aria-current="page" href="../administrador/AnadirHerramienta") Añadir herramienta 
                             li(class="nav-item")
-                            a(class="nav-link" href="#") Actualizar herramienta
+                            a(class="nav-link" href="../administrador/ActualizarHerramienta") Actualizar herramienta
             
                             li(class="nav-item")
-                                a(class="nav-link" href="#") Ver inventario
+                                a(class="nav-link" href="../administrador/VisualizarInventario") Ver inventario
                             li(class="nav-item")
-                                a(class="nav-link" href="#") Eliminar herramienta
+                                a(class="nav-link" href="../administrador/EliminarHerramienta") Eliminar herramienta
                             li(class="nav-item")
                                 a(class="nav-link" href="/") Salir
 
