@@ -13,9 +13,10 @@ router.get('/ActualizarHerramienta',(req,res)=>{
     res.render('updateTool',{title:"Actualizar herramienta",Tools})
 });
 router.get('/VisualizarInventario',(req,res)=>{
-    res.render('admin',{title:"Addekjhkjdr"})
+    res.render('admin',{title:"PENDIENTE"})
 });
 router.get('/EliminarHerramienta',(req,res)=>{
-    res.render('admin',{title:"Addekjhkjdr"})
+    var Tools=[{"id":"22","name":"333"}];
+    res.render('DeleteTool',{title:"Eliminar herramienta",Tools})
 });
 module.exports = router;
