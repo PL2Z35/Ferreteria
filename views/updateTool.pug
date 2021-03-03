@@ -1,0 +1,37 @@
+extends ./common/adminLayout
+block content
+    div(class="container" )
+        div(class="row justify-content-center h-100 col mb-3")
+            div(class="col-sm-8 aling-self-center")
+                div(class="card" id="data")
+                    div(class="card-body text-center")
+                        form
+                            div(class="row col mb-3")
+                                div(class="col")
+                                    div(class="form-group")
+                                        label(for="Barcodes") Codigo de barras
+                                        select(id="Barcodes" class="form-select") 
+                                            option(value="0") Seleccione 
+                                            each item in Tools
+                                                option(value=item.id)=item.id
+                                            
+
+                            div(class="row col mb-3")
+                                div(class="col")
+                                    div(class="form-group")
+                                        label(for="Quantity") Cantidad:  
+                                        input(type="text" id="Quantity" class="form-control" placeholder="Cantidad")
+                                div(class="col")
+                                    div(class="form-group")
+                                        label(for="Price") Precio unitario:  
+                                        input(type="number" id="Price" class="form-control" placeholder="Precio unitario")
+                            div(class="row col mb-3")
+                                div(class="col")
+                                    div(class="form-group")
+                                        label(for="Description") Descripcion:  
+                                        textarea( rows="3" type="text" id="Description" class="form-control" placeholder="Descripcion")
+                            div(class="row col mb-3")
+                                div(class="col")
+                                    button(type="submit" class="btn btn-dark btn-lg") Actualizar 
+                                div(class="col")
+                                    button(type="reset" class="btn btn-dark btn-lg") Limpiar

@@ -9,7 +9,8 @@ router.get('/AnadirHerramienta',(req,res)=>{
     res.render('newTools',{title:"Añadir Herramienta"})
 });
 router.get('/ActualizarHerramienta',(req,res)=>{
-    res.render('admin',{title:"Addekjhkjdr"})
+    var Tools=[{"id":"22","name":"333"}];
+    res.render('updateTool',{title:"Actualizar herramienta",Tools})
 });
 router.get('/VisualizarInventario',(req,res)=>{
     res.render('admin',{title:"Addekjhkjdr"})
