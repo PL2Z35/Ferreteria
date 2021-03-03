@@ -6,7 +6,7 @@ router.get('/',(req,res)=>{
   res.render('admin',{title:"Administrador"})
 });
 router.get('/AnadirHerramienta',(req,res)=>{
-    res.render('admin',{title:"Addedr"})
+    res.render('newTools',{title:"Añadir Herramienta"})
 });
 router.get('/ActualizarHerramienta',(req,res)=>{
     res.render('admin',{title:"Addekjhkjdr"})

@@ -1,0 +1,12 @@
+body{
+    background: url("https://image.freepik.com/foto-gratis/guantes-herramientas-espacio-copia_23-2148393099.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+#data{
+    background-color:#E95911;
+    color: azure;
+}
