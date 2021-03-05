@@ -14,7 +14,7 @@ app.get('/', function(req,res){
         title: 'Ferreteria'
     })
 });
-app.use('/administrador',AdminRouter);
+app.use(' ',AdminRouter);
 app.use('/administrador/AnadirHerramientas',AdminRouter);
 
 //Carpeta publica
