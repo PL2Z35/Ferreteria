@@ -10,12 +10,14 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+app.use(express.urlencoded({extended: false}));
+
 //Crear servidor
 app.get('/', function(req,res){
     res.render('index',{
         title: 'Ferreteria'
     })
-    
+
 });
 
 app.use(body_parser.urlencoded({extended:true}));
@@ -51,3 +53,8 @@ app.post('/add', (req,res)=>{
 
 
 
+
+
+app.post('/pepe',(req, res)=>{
+  console.log("llega y esta bien");
+})

@@ -5,4 +5,5 @@ const path=require('path');
 router.get('/',(req,res)=>{
   res.render('index',{title:"Ferreteria"})
 });
+
 module.exports = router;

@@ -5,32 +5,32 @@ block content
             div(class="col-sm-8 aling-self-center")
                 div(class="card" id="data")
                     div(class="card-body text-center")
-                        form
+                        form(method="post" action="/administrador/newTools" )
                             div(class="row col mb-3")
                                 div(class="col")
                                     div(class="form-gruop")
-                                        label(for="BarCode") Codigo de barras:  
-                                        input(type="number" id="BarCode" class="form-control" placeholder="Codigo de barras")
+                                        label(for="BarCode") Codigo de barras:
+                                        input(type="number" name="BarCode" id="BarCode" class="form-control" placeholder="Codigo de barras" required)
                                 div(class="col")
                                     div(class="form-gruop")
-                                        label(for="Quantity") Numero de elementos:  
-                                        input(type="number" id="Quantity" class="form-control" placeholder="Numero de elementos")
+                                        label(for="Quantity") Numero de elementos:
+                                        input(type="number" name="Quantity" id="Quantity" class="form-control" placeholder="Numero de elementos" required)
                             div(class="row col mb-3")
                                 div(class="col")
                                     div(class="form-group")
-                                        label(for="Brand") Marca:  
-                                        input(type="text" id="Brand" class="form-control" placeholder="Marca")
+                                        label(for="Brand") Marca:
+                                        input(type="text" name="Brand" id="Brand" class="form-control" placeholder="Marca" required)
                                 div(class="col")
                                     div(class="form-group")
-                                        label(for="Price") Precio unitario:  
-                                        input(type="number" id="Price" class="form-control" placeholder="Precio unitario")
+                                        label(for="Price") Precio unitario:
+                                        input(type="number" name="Price" id="Price" class="form-control" placeholder="Precio unitario" required)
                             div(class="row col mb-3")
                                 div(class="col")
                                     div(class="form-group")
-                                        label(for="Description") Descripcion:  
-                                        textarea( rows="3" type="text" id="Description" class="form-control" placeholder="Descripcion")
+                                        label(for="Description") Descripcion:
+                                        textarea( rows="3" type="text" name="Description" id="Description" class="form-control" placeholder="Descripcion" )
                             div(class="row col mb-3")
                                 div(class="col")
-                                    button(type="submit" class="btn btn-dark btn-lg") Registrar 
+                                    button(type="submit" class="btn btn-dark btn-lg") Registrar
                                 div(class="col")
                                     button(type="reset" class="btn btn-dark btn-lg") Limpiar
