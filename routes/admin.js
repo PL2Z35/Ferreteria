@@ -20,7 +20,7 @@ router.get('/ActualizarHerramienta',(req,res)=>{
 });
 
 router.get('/VisualizarInventario',(req,res)=>{
-    res.render('admin',{title:"PENDIENTE"})
+    res.render('ViewTools',{title:"Ver Inventario",tools})
 });
 router.get('/EliminarHerramienta',(req,res)=>{
     res.render('DeleteTool',{title:"Eliminar herramienta",tools})
