@@ -68,32 +68,32 @@ router.post('/updatetool',(req,res)=>{
       Price,
       Description
     }
-  /*const barsCode;
-  const quantity;
-  const brand;
-  const price;
-  const description;
-  /*const barcode=req.body.Barcodes;
-  const quantity=req.body.Quantity;
-  const price=req.body.Price;
-  const description=req.body.Description;*/
-
-
-  for (i = 0; i < tools.length; i++){
-    barsCode = tools[i].BarCodes;
-    quantity = tools[i].Quantity;
-    price = tools[i].Price;
-    description = tools[i].Description;
-    if(Quantity!=null && Price!=null && Description!=null ){
-      if(Quantity>0 && Price>0){
-        res.render('admin',{title:"Administrador"})
-        tools.update(updateTool);
-      }else {
-        res.render('newTools',{title:"Añadir Herramienta"})
+    const toolsAuxiliar=[];
+    const lengTools=tools.length;
+    for (i = 0; i < lengTools; i++){
+      var toolAux=tools.pop();
+      if(toolAux.BarCode == Barcodes){
+        if(Quantity>=0 && Quantity!="" ){
+          toolAux.Quantity=Quantity;
+        }
+        if(Price>0 && Price!=""){
+          toolAux.Price=Price;
+        }
+        if(Description!=""){
+          toolAux.Description=Description;
+        }
+        toolsAuxiliar.push(toolAux);
+      }else{
+        toolsAuxiliar.push(toolAux);
       }
-    }
   }
-
+  for (i = 0; i < tools.length; i++){
+    tools.pop();
+  }
+  for (i = 0; i < toolsAuxiliar.length; i++){
+    tools.push(toolsAuxiliar[i]);
+  }
+  res.render('admin',{title:"Administrador"});
 });
 
 
@@ -114,9 +114,4 @@ router.post('/deletetool',(req,res)=>{
   console.log(tools);
   res.render('admin',{title:"Administrador"});
 });
-
-
-
-
-
 module.exports = router;
