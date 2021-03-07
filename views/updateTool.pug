@@ -13,7 +13,7 @@ block content
                                         select(id="Barcodes" name="Barcodes" class="form-select")
                                             option(value="0") Seleccione
                                             each item in tools
-                                                option(value=item.BarCode)=item.BarCode
+                                                option(value=item.BarCode)=item.BarCode+"----->"+item.Description
 
                             div(class="row col mb-3")
                                 div(class="col")

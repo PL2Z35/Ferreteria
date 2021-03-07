@@ -39,6 +39,7 @@ router.post('/newTools', (req, res) => {
 
   for (i = 0; i < tools.length; i++){
     barsCode = tools[i].BarCode;
+    console.log("varr"+barsCode);
     if(barsCode == BarCode){
       existe = i;
       estado = true;
@@ -111,6 +112,7 @@ router.post('/deletetool',(req,res)=>{
   }
   tools.pop(dato);
   console.log(tools);
+  res.render('admin',{title:"Administrador"});
 });
 
 
