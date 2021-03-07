@@ -12,8 +12,8 @@ block content
                                         label(for="Barcodes") Codigo de barras
                                         select(id="Barcodes" name="Barcodes" class="form-select")
                                             option(value="0") Seleccione
-                                            each item in Tools
-                                                option(value=item.id)=item.id
+                                            each item in tools
+                                                option(value=item.BarCode)=item.BarCode
                             div(class="row col mb-3")
                                 div(class="col")
                                     button(type="submit" class="btn btn-dark btn-lg") Eliminar
