@@ -12,7 +12,6 @@ router.get('/',(req,res)=>{
 
 router.get('/AnadirHerramienta',(req,res)=>{
     res.render('newTools',{title:"Añadir Herramienta"})
-
 });
 
 router.get('/ActualizarHerramienta',(req,res)=>{
@@ -22,6 +21,7 @@ router.get('/ActualizarHerramienta',(req,res)=>{
 router.get('/VisualizarInventario',(req,res)=>{
     res.render('ViewTools',{title:"Ver Inventario",tools})
 });
+
 router.get('/EliminarHerramienta',(req,res)=>{
     res.render('DeleteTool',{title:"Eliminar herramienta",tools})
 });
@@ -114,4 +114,5 @@ router.post('/deletetool',(req,res)=>{
   console.log(tools);
   res.render('admin',{title:"Administrador"});
 });
+
 module.exports = router;

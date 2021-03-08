@@ -1,0 +1,87 @@
+html(lang="en")
+    include common/head.pug
+    +head("Valdéz")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js")
+
+    body
+        div(class="py-1 top")
+                div(class="container")
+                    div(class="row")
+                        div(class="col-sm text-center text-md-left mb-md-0 mb-2 pr-md-4 d-flex topper align-items-center")
+                            p(class="mb-0 w-100")
+                                span(class="fa fa-paper-plane")
+                                span(class="text") youremail@email.com
+                        div(class="col-sm justify-content-center d-flex mb-md-0 mb-2")
+                            div(class="social-media")
+                                p(class="mb-0 d-flex")
+                                    a(href="#" class="d-flex align-items-center justify-content-center")
+                                        span(class="fa fa-facebook")
+                                            i(class="sr-only") Facebook
+                        div(class="col-sm-12 col-md-6 col-lg-7 d-flex topper align-items-center text-lg-right justify-content-end")
+                            p(class="mb-0 register-link")
+                                a(href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter") Login
+
+        div(class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+            div(class="modal-dialog modal-dialog-centered" role="document")
+                div(class="modal-content")
+                    div(class="modal-header")
+                        button(type="button" class="close d-flex align-items-center justify-content-center" data-dismiss="modal" aria-label="Close")
+                            span(aria-hidden="true" class="fa fa-close")
+                    div(class="modal-body p-4 p-md-5")
+                        form(action="/log" class="appointment-form ftco-animate" method="POST")
+                            h3
+                                center Login
+                            div(class="")
+                                div(class="form-group")
+                                    input(id="user" name='user' type="text" class="form-control" placeholder="Usuario")
+                                div(class="form-group")
+                                    input(id="pass" name="pass" type="password" class="form-control" placeholder="Contraseña")
+                            div(class="")
+                                div(class="form-group")
+                                    button(type="submit" value="Aceptar" class="btn btn-primary py-3 px-4" onclick="login()") Aceptar
+        
+        nav(class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar")
+            div(class="container d-flex align-items-center")
+                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation")
+                    span(class="fa fa-bars") Menu
+                div(class="collapse navbar-collapse" id="ftco-nav")
+                    ul(class="navbar-nav mr-auto")
+                        li(class="nav-item")
+                            a(href="/" class="nav-link") Inicio
+                        li(class="nav-item active")
+                            a(class="nav-link") Catergorias
+                    a(href="#" class="btn-custom" data-toggle="modal" data-target="#exampleModalCenter") Login
+
+        section(class="hero-wrap hero-wrap-2" style="background-image: url(images/categories.jpg); background-position: 50% 0%;" data-stellar-background-ratio="0.5")
+            div(class="overlay")
+            div(class="container")
+                div(class="row no-gutters slider-text align-items-end justify-content-start")
+                    div(class="col-md-9 ftco-animate pb-5 fadeInUp ftco-animated")
+                        p(class="breadcrumbs")
+                            span(class="mr-2")
+                                a(href="/") Inicio
+                                    i(class="fa fa-chevron-right") 
+                            span Categorias 
+                                i(class="fa fa-chevron-right")
+                        h1(class="mb-3 bread") Categorias
+
+        section(class="ftco-section")
+            div(class="container")
+                div(class="row justify-content-center mb-5 pb-3")
+                    div(class="col-md-7 text-center heading-section ftco-animate")
+                        span(class="subheading") Todos Productos
+                        h2(class="mb-4") Tabla de productos
+                table(class="table table-fluid" id="myTable")
+                    thread
+                        tr
+                            th NAme 
+                            th Aux
+                    tbody
+        script
+            include funtions/table.js
+
+
+include common/footer.pug
++footer()

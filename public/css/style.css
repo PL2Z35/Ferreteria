@@ -4,6 +4,14 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+.select,
+#locale {
+	width: 100%;
+}
+.like {
+	margin-right: 10px;
+}
+
 :root {
 	--blue: #007bff;
 	--indigo: #6610f2;
@@ -10909,12 +10917,10 @@ button:focus {
 	outline: none !important;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
-.h1,
 .h2,
 .h3,
 .h4,
@@ -13324,16 +13330,15 @@ textarea.form-control {
 
 .brands {
 	width: 100%;
-	padding-top: 90px;
-	padding-bottom: 90px;
 }
 
 .brands_slider_container {
-	height: 130px;
-	border: solid 1px #e8e8e8;
+	height: 100px;
+	width: 100%;
+	border: 0;
 	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-	padding-left: 97px;
-	padding-right: 97px;
+	padding-left: 200px;
+	padding-right: 200px;
 	background: #fff;
 }
 
@@ -13347,7 +13352,8 @@ textarea.form-control {
 }
 
 .brands_item img {
-	max-width: 100%;
+	max-width: 70px;
+	max-height: 70px;
 }
 
 .brands_nav {
@@ -13382,3 +13388,16 @@ textarea.form-control {
 .brands_next {
 	right: 40px;
 }
+
+.carousel .item {
+	height: 300px;
+}
+
+.item img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 300px;
+}
+
+#heading { color: #000000; }
